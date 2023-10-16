@@ -1,22 +1,19 @@
 
-# Phase 3 Project Description
+# Phase 3 FLU SHOT LEARNING: PREDICT H1N1 AND SEASONAL FLU VACCINES
 
-Congratulations! You've made it through another _intense_ module, and now you're ready to show off your newfound Machine Learning skills!
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-3-project-v2-3/main/images/smart.gif)
 
-All that remains in Phase 3 is to put your new skills to use with another large project!
 
-In this project description, we will cover:
 
-* Project Overview
-* Deliverables
-* Grading
-* Getting Started
+##  Phase 3 Project - Choosing a Dataset
+ H1N1 and Seasonal Flu VaccinesLinks to an external site.
+This dataset is part of an active competition until March 31, 2022!
 
+As the world struggles to vaccinate the global population against COVID-19, an understanding of how people’s backgrounds, opinions, and health behaviors are related to their personal vaccination patterns can provide guidance for future public health efforts. Your audience could be someone guiding those public health efforts.
+
+This challenge: can you predict whether people got H1N1 and seasonal flu vaccines using data collected in the National 2009 H1N1 Flu Survey? This is a binary classification problem, but there are two potential targets: whether the survey respondent received the seasonal flu vaccine, or whether the respondent received the H1N1 flu vaccine. Please choose just one of these potential targets for your minimum viable project.
 ## Project Overview
 
-For this project, you will engage in the full data science process from start to finish, solving a **classification** problem using a **dataset of your choice**.
 
 ### Business Problem and Data
 
