@@ -44,36 +44,43 @@ training_set_labels
 
 provides the target variables for each respondent, indicating whether they received the H1N1 vaccine (h1n1_vaccine) and the seasonal vaccine (seasonal_vaccine).
 
-	Missing Values	Percentage
-employment_occupation	13470	50.436215
-employment_industry	13330	49.912008
-health_insurance	12274	45.957989
-income_poverty	4423	16.561201
-doctor_recc_h1n1	2160	8.087767
-doctor_recc_seasonal	2160	8.087767
-rent_or_own	2042	7.645936
-employment_status	1463	5.477965
-marital_status	1408	5.272026
-education	1407	5.268282
-chronic_med_condition	971	3.635751
-child_under_6_months	820	3.070356
-health_worker	804	3.010447
-opinion_seas_sick_from_vacc	537	2.010709
-opinion_seas_risk	514	1.924589
-opinion_seas_vacc_effective	462	1.729884
-opinion_h1n1_sick_from_vacc	395	1.479013
-opinion_h1n1_vacc_effective	391	1.464036
-opinion_h1n1_risk	388	1.452803
-household_adults	249	0.932340
-household_children	249	0.932340
-behavioral_avoidance	208	0.778822
-behavioral_touch_face	128	0.479275
-h1n1_knowledge	116	0.434343
-h1n1_concern	92	0.344479
-behavioral_large_gatherings	87	0.325757
-behavioral_outside_home	82	0.307036
-behavioral_antiviral_meds	71	0.265848
-behavioral_wash_hands	42	0.157262
-behavioral_face_mask	19	0.071142
+## MISSING VALUES AND DUPLICATES
+
+From our merged data set we have no duplicates
+
+Several columns have missing values. The columns employment_occupation, employment_industry, and health_insurance have notably high percentages of missing data, with 50.44%, 49.91%, and 45.96% missing respectively. To handle the missing data, we have a few options:
+
+For categorical data: Fill missing values with the mode (most frequent value) of the column. Create a new category, e.g., "Unknown" or "Not Provided". For numerical data: Fill with mean, median, or a designated placeholder value. Use a model like KNN to impute the missing values. We shall use this as we fill the missing values
+
+## Visualising categorical data
+![](/images/Distribution of h1n1_concern,h1n1_knowledge, behavioral_antiviral_meds, health_insurance and opinion_h1n1_risk,.png)
+we can observe:
+
+The majority of respondents have a moderate level of concern (Level 2) about H1N1. The number of respondents with a high level of concern (Level 3) is slightly lower than those with a moderate level. Fewer respondents have low concern or no concern about H1N1 (Levels 0 and 1).
+
+H1N1 Knowledge:
+
+The majority of respondents have a moderate level of knowledge about H1N1 (Level 2). A significant number have a high level of knowledge (Level 1). Few respondents have no knowledge about H1N1 (Level 0). Behavioral Antiviral Meds:
+
+Most respondents did not take antiviral medications. Only a small proportion took antiviral medications. Health Insurance:
+
+A significant number of respondents have health insurance. However, there's also a considerable number of respondents without health insurance. Opinion on H1N1 Risk:
+
+Many respondents believe they have a moderate risk of getting sick with H1N1 if they don't get vaccinated. Fewer respondents believe they have a high risk, while some believe they have a low risk or are not sure.
+
+## Bivariate analysis for h1n1_concern', 'h1n1_knowledge', 'behavioral_antiviral_meds', 'health_insurance', 'opinion_h1n1_risk'
 
 
+## Bivariate analysis for Age Group, Education, Income Poverty, Race and Sex
+![](/images/Distribution of Age Group for H1N1 Vaccine.png)
+
+## CORRELATION ANALYSIS
+![](/images/Correlation of Features with Seasonal Vaccine.png
+)
+H1N1 Vaccine Correlations:
+
+Doctor recommendations (doctor_recc_h1n1) have the highest positive correlation with getting the H1N1 vaccine. This suggests that individuals are more likely to get vaccinated if recommended by a healthcare professional. Respondents' opinions on the risks and effectiveness of the H1N1 vaccine (opinion_h1n1_risk, opinion_h1n1_vacc_effective, and opinion_h1n1_sick_from_vacc) also show significant correlations.
+
+Seasonal Vaccine Correlations:
+
+The age group of the respondent (age_group) has a strong positive correlation with receiving the seasonal vaccine. Doctor recommendations for the seasonal flu vaccine (doctor_recc_seasonal) and opinions about its risk and effectiveness are also significantly correlated. Interestingly, the correlation of h1n1_vaccine with the seasonal vaccine is also evident, reinforcing our earlier observation that the two are not independent.
