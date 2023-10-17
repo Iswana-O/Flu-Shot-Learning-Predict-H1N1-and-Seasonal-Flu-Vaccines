@@ -35,5 +35,45 @@ This challenge: can you predict whether people got H1N1 and seasonal flu vaccine
  **DATA SOURCE:** DrivenData. (2020). Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines. Retrieved [10 /17/2023] from https://www.drivendata.org/competitions/66/flu-shot-learning.
 
 ## Data Exploration
+We have two data sets that we have merged
+training_set_features
+
+contains information about the respondents, such as their level of concern about the H1N1 virus, knowledge about H1N1, behavioral habits, and demographic details.
+
+training_set_labels
+
+provides the target variables for each respondent, indicating whether they received the H1N1 vaccine (h1n1_vaccine) and the seasonal vaccine (seasonal_vaccine).
+
+	Missing Values	Percentage
+employment_occupation	13470	50.436215
+employment_industry	13330	49.912008
+health_insurance	12274	45.957989
+income_poverty	4423	16.561201
+doctor_recc_h1n1	2160	8.087767
+doctor_recc_seasonal	2160	8.087767
+rent_or_own	2042	7.645936
+employment_status	1463	5.477965
+marital_status	1408	5.272026
+education	1407	5.268282
+chronic_med_condition	971	3.635751
+child_under_6_months	820	3.070356
+health_worker	804	3.010447
+opinion_seas_sick_from_vacc	537	2.010709
+opinion_seas_risk	514	1.924589
+opinion_seas_vacc_effective	462	1.729884
+opinion_h1n1_sick_from_vacc	395	1.479013
+opinion_h1n1_vacc_effective	391	1.464036
+opinion_h1n1_risk	388	1.452803
+household_adults	249	0.932340
+household_children	249	0.932340
+behavioral_avoidance	208	0.778822
+behavioral_touch_face	128	0.479275
+h1n1_knowledge	116	0.434343
+h1n1_concern	92	0.344479
+behavioral_large_gatherings	87	0.325757
+behavioral_outside_home	82	0.307036
+behavioral_antiviral_meds	71	0.265848
+behavioral_wash_hands	42	0.157262
+behavioral_face_mask	19	0.071142
 
 
