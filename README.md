@@ -53,7 +53,7 @@ Several columns have missing values. The columns employment_occupation, employme
 For categorical data: Fill missing values with the mode (most frequent value) of the column. Create a new category, e.g., "Unknown" or "Not Provided". For numerical data: Fill with mean, median, or a designated placeholder value. Use a model like KNN to impute the missing values. We shall use this as we fill the missing values
 
 ## Visualising categorical data
-![](/images/Distribution of h1n1_concern,h1n1_knowledge, behavioral_antiviral_meds, health_insurance and opinion_h1n1_risk,.png)
+![](/images/Distribution of h1n1_concern,h1n1_knowledge, behavioral_antiviral_meds, health_insurance and opinion_h1n1_risk,.png).
 we can observe:
 
 The majority of respondents have a moderate level of concern (Level 2) about H1N1. The number of respondents with a high level of concern (Level 3) is slightly lower than those with a moderate level. Fewer respondents have low concern or no concern about H1N1 (Levels 0 and 1).
@@ -72,11 +72,10 @@ Many respondents believe they have a moderate risk of getting sick with H1N1 if 
 
 
 ## Bivariate analysis for Age Group, Education, Income Poverty, Race and Sex
-![](/images/Distribution of Age Group for H1N1 Vaccine.png)
+![](/images/Distribution of Age Group for H1N1 Vaccine.png).
 
 ## CORRELATION ANALYSIS
-![](/images/Correlation of Features with Seasonal Vaccine.png
-)
+![](/images/Correlation of Features with Seasonal Vaccine.png).
 H1N1 Vaccine Correlations:
 
 Doctor recommendations (doctor_recc_h1n1) have the highest positive correlation with getting the H1N1 vaccine. This suggests that individuals are more likely to get vaccinated if recommended by a healthcare professional. Respondents' opinions on the risks and effectiveness of the H1N1 vaccine (opinion_h1n1_risk, opinion_h1n1_vacc_effective, and opinion_h1n1_sick_from_vacc) also show significant correlations.
