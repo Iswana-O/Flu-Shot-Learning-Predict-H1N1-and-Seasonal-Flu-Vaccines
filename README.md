@@ -53,7 +53,8 @@ Several columns have missing values. The columns employment_occupation, employme
 For categorical data: Fill missing values with the mode (most frequent value) of the column. Create a new category, e.g., "Unknown" or "Not Provided". For numerical data: Fill with mean, median, or a designated placeholder value. Use a model like KNN to impute the missing values. We shall use this as we fill the missing values
 
 ## Visualising categorical data
-![](/images/Distribution of h1n1_concern,h1n1_knowledge, behavioral_antiviral_meds, health_insurance and opinion_h1n1_risk,.png).
+![](/images/h1%20concern%20and%20knowledge.png)
+![](images/images/antiviral.png)
 we can observe:
 
 The majority of respondents have a moderate level of concern (Level 2) about H1N1. The number of respondents with a high level of concern (Level 3) is slightly lower than those with a moderate level. Fewer respondents have low concern or no concern about H1N1 (Levels 0 and 1).
