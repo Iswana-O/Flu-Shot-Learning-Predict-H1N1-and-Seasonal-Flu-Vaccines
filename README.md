@@ -54,7 +54,7 @@ For categorical data: Fill missing values with the mode (most frequent value) of
 
 ## Visualising categorical data
 ![](/images/h1%20concern%20and%20knowledge.png)
-![](images/images/antiviral.png)
+
 we can observe:
 
 The majority of respondents have a moderate level of concern (Level 2) about H1N1. The number of respondents with a high level of concern (Level 3) is slightly lower than those with a moderate level. Fewer respondents have low concern or no concern about H1N1 (Levels 0 and 1).
@@ -89,6 +89,8 @@ The age group of the respondent (age_group) has a strong positive correlation wi
 The model performs relatively well for both vaccines, but there's room for improvement, especially in recall for h1n1_vaccine. The lower recall indicates that the model might be missing a significant portion of individuals who actually received the H1N1 vaccine. The results for seasonal_vaccine are more balanced, with both precision and recall being in the mid-70s. These metrics provide a comprehensive view of the model's performance.
 
 ## SECOND MODEL: LOGISTIC REGRESSION AFTER HANDLING CLASS IMBALANCE h1n1_vaccine
+![](/images/logreg%20confusion.png)
+![](/images/logreg%20roc.png)
 The model's accuracy after applying SMOTE is slightly lower than the model trained on the original imbalanced dataset. However, the recall for Class 1 (Vaccinated) has seen a significant improvement (from 43% in the original model to 72% in the SMOTE model). This improved recall indicates that the model is better at identifying individuals who actually received the H1N1 vaccine.
 
 There is a trade-off in precision for Class 1, which has decreased to 49%. This means that the model now makes more false positive predictions (predicting someone received the vaccine when they didn't) in its attempt to capture more true positives (correctly predicting someone received the vaccine).
@@ -96,9 +98,14 @@ There is a trade-off in precision for Class 1, which has decreased to 49%. This 
 This illustrates the power of addressing class imbalance in datasets,
 
 ## THIRD MODEL: RANDOM FOREST CLASSIFIER
+
+![](/images/rf%20confusion.png)
+![](/images/rf%20roc.png)
 he model's accuracy for the h1n1_vaccine target is quite high at 83.86%. For predicting individuals who did not receive the H1N1 vaccine (Class 0), the model performs exceptionally well with a high precision, recall, and F1-score. For predicting individuals who received the H1N1 vaccine (Class 1), while the precision is decent, the recall is relatively low, indicating that there are a significant number of false negatives (individuals who received the vaccine but were predicted as not receiving it). This is evident from the F1-score of 53% for Class 1, indicating that there's a balance to be achieved between precision and recall for this class.
 
 ## Final Model (Gradient Booster Classifier)
+![](/images/gb%20confusion.png)
+![](/images/gb%20roc.png)
 For H1N1 Flu predictions, the model performs relatively well with an accuracy of 84%. It performs better at identifying true negatives than true positives.
 
 For Seasonal Flu, the model has a lower overall accuracy of 63%. The model is very good at identifying negatives (high recall for class 0) but struggles significantly with identifying true positives (low recall for class 1).
@@ -106,6 +113,8 @@ For Seasonal Flu, the model has a lower overall accuracy of 63%. The model is ve
 In both cases, the model seems to be more biased towards predicting the negative class (either for H1N1 or Seasonal Flu), as indicated by the higher recall for class 0 in both models
 ## RESULTS AND CONCLUSIONS
 ### Predict probabilities and plot their distribution
+![](/images//probabilities.png)
+![](/images/comparison.png)
 H1N1 Flu:
 
 Overall: For predicting h1n1_vaccine, all three models offer competitive performance, with slight variations in precision, recall, and F1-score.
