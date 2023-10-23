@@ -83,25 +83,29 @@ Doctor recommendations (doctor_recc_h1n1) have the highest positive correlation 
 Seasonal Vaccine Correlations:
 
 The age group of the respondent (age_group) has a strong positive correlation with receiving the seasonal vaccine. Doctor recommendations for the seasonal flu vaccine (doctor_recc_seasonal) and opinions about its risk and effectiveness are also significantly correlated. Interestingly, the correlation of h1n1_vaccine with the seasonal vaccine is also evident, reinforcing our earlier observation that the two are not independent.
+## MODELLING
+## FIRST MODEL: LOGISTIC REGRESSION
+The model performs relatively well for both vaccines, but there's room for improvement, especially in recall for h1n1_vaccine. The lower recall indicates that the model might be missing a significant portion of individuals who actually received the H1N1 vaccine. The results for seasonal_vaccine are more balanced, with both precision and recall being in the mid-70s. These metrics provide a comprehensive view of the model's performance.
+
+## SECOND MODEL: LOGISTIC REGRESSION AFTER HANDLING CLASS IMBALANCE h1n1_vaccine
+The model's accuracy after applying SMOTE is slightly lower than the model trained on the original imbalanced dataset. However, the recall for Class 1 (Vaccinated) has seen a significant improvement (from 43% in the original model to 72% in the SMOTE model). This improved recall indicates that the model is better at identifying individuals who actually received the H1N1 vaccine.
+
+There is a trade-off in precision for Class 1, which has decreased to 49%. This means that the model now makes more false positive predictions (predicting someone received the vaccine when they didn't) in its attempt to capture more true positives (correctly predicting someone received the vaccine).
+
+This illustrates the power of addressing class imbalance in datasets,
+
+## THIRD MODEL: RANDOM FOREST CLASSIFIER
+he model's accuracy for the h1n1_vaccine target is quite high at 83.86%. For predicting individuals who did not receive the H1N1 vaccine (Class 0), the model performs exceptionally well with a high precision, recall, and F1-score. For predicting individuals who received the H1N1 vaccine (Class 1), while the precision is decent, the recall is relatively low, indicating that there are a significant number of false negatives (individuals who received the vaccine but were predicted as not receiving it). This is evident from the F1-score of 53% for Class 1, indicating that there's a balance to be achieved between precision and recall for this class.
+
+## Final Model (Gradient Booster Classifier)
+For H1N1 Flu predictions, the model performs relatively well with an accuracy of 84%. It performs better at identifying true negatives than true positives.
+
+For Seasonal Flu, the model has a lower overall accuracy of 63%. The model is very good at identifying negatives (high recall for class 0) but struggles significantly with identifying true positives (low recall for class 1).
+
+In both cases, the model seems to be more biased towards predicting the negative class (either for H1N1 or Seasonal Flu), as indicated by the higher recall for class 0 in both models
 ## RESULTS AND CONCLUSIONS
 ### Predict probabilities and plot their distribution
 H1N1 Flu:
-
-Precision: Random Forest and Gradient Boosting have similar precision, both higher than Logistic Regression.
-
-Recall: Logistic Regression has the highest recall, meaning it correctly identifies a larger percentage of actual positives than the other two models.
-
-F1-score: Given the balance of precision and recall, the F1-scores are quite close for all three models.
-
-Accuracy: Both Gradient Boosting and Random Forest have the same accuracy, which is higher than that of Logistic Regression. Seasonal Flu:
-
-Precision: Gradient Boosting has the highest precision, followed closely by Logistic Regression and then Random Forest.
-
-Recall: Logistic Regression has the highest recall, followed closely by Random Forest, while Gradient Boosting lags significantly.
-
-F1-score: Logistic Regression and Random Forest have much higher F1-scores than Gradient Boosting for seasonal_vaccine, given their balanced precision and recall.
-
-Accuracy: Logistic Regression has the highest accuracy, followed closely by Random Forest, with Gradient Boosting having notably lower accuracy.
 
 Overall: For predicting h1n1_vaccine, all three models offer competitive performance, with slight variations in precision, recall, and F1-score.
 
