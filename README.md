@@ -85,8 +85,11 @@ Many respondents believe they have a moderate risk of getting sick with H1N1 if 
 ![](/images/antiviral.png)
 
 ![](/images/agegroup.png)
+
 ## CORRELATION ANALYSIS
+
 ![](/images/contingency.png)
+
 H1N1 Vaccine Correlations:
 
 Doctor recommendations (doctor_recc_h1n1) have the highest positive correlation with getting the H1N1 vaccine. This suggests that individuals are more likely to get vaccinated if recommended by a healthcare professional. Respondents' opinions on the risks and effectiveness of the H1N1 vaccine (opinion_h1n1_risk, opinion_h1n1_vacc_effective, and opinion_h1n1_sick_from_vacc) also show significant correlations.
@@ -102,6 +105,7 @@ The model performs relatively well for both vaccines, but there's room for impro
 
 ## SECOND MODEL: LOGISTIC REGRESSION AFTER HANDLING CLASS IMBALANCE h1n1_vaccine
 ![](/images/logreg%20confusion.png)
+
 ![](/images/logreg%20roc.png)
 The model's accuracy after applying SMOTE is slightly lower than the model trained on the original imbalanced dataset. However, the recall for Class 1 (Vaccinated) has seen a significant improvement (from 43% in the original model to 72% in the SMOTE model). This improved recall indicates that the model is better at identifying individuals who actually received the H1N1 vaccine.
 
@@ -112,11 +116,13 @@ This illustrates the power of addressing class imbalance in datasets,
 ## THIRD MODEL: RANDOM FOREST CLASSIFIER
 
 ![](/images/rf%20confusion.png)
+
 ![](/images/rf%20roc.png)
 he model's accuracy for the h1n1_vaccine target is quite high at 83.86%. For predicting individuals who did not receive the H1N1 vaccine (Class 0), the model performs exceptionally well with a high precision, recall, and F1-score. For predicting individuals who received the H1N1 vaccine (Class 1), while the precision is decent, the recall is relatively low, indicating that there are a significant number of false negatives (individuals who received the vaccine but were predicted as not receiving it). This is evident from the F1-score of 53% for Class 1, indicating that there's a balance to be achieved between precision and recall for this class.
 
 ## Final Model (Gradient Booster Classifier)
 ![](/images/gb%20confusion.png)
+
 ![](/images/gb%20roc.png)
 For H1N1 Flu predictions, the model performs relatively well with an accuracy of 84%. It performs better at identifying true negatives than true positives.
 
@@ -126,7 +132,9 @@ In both cases, the model seems to be more biased towards predicting the negative
 ## RESULTS AND CONCLUSIONS
 ### Predict probabilities and plot their distribution
 ![](/images//probabilities.png)
+
 ![](/images/comparison.png)
+
 H1N1 Flu:
 
 Overall: For predicting h1n1_vaccine, all three models offer competitive performance, with slight variations in precision, recall, and F1-score.
