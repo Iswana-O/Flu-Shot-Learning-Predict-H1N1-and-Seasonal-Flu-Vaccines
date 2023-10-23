@@ -55,6 +55,11 @@ For categorical data: Fill missing values with the mode (most frequent value) of
 ## Visualising categorical data
 ![](/images/h1%20concern%20and%20knowledge.png)
 
+
+![](/images/behavioral.png)
+
+
+
 we can observe:
 
 The majority of respondents have a moderate level of concern (Level 2) about H1N1. The number of respondents with a high level of concern (Level 3) is slightly lower than those with a moderate level. Fewer respondents have low concern or no concern about H1N1 (Levels 0 and 1).
@@ -73,10 +78,15 @@ Many respondents believe they have a moderate risk of getting sick with H1N1 if 
 
 
 ## Bivariate analysis for Age Group, Education, Income Poverty, Race and Sex
-![](/images/Distribution of Age Group for H1N1 Vaccine.png).
+![](/images/age.png)
 
+![](/images/agegroup.png)
+
+![](/images/antiviral.png)
+
+![](/images/agegroup.png)
 ## CORRELATION ANALYSIS
-![](/images/Correlation of Features with Seasonal Vaccine.png).
+![](/images/contingency.png)
 H1N1 Vaccine Correlations:
 
 Doctor recommendations (doctor_recc_h1n1) have the highest positive correlation with getting the H1N1 vaccine. This suggests that individuals are more likely to get vaccinated if recommended by a healthcare professional. Respondents' opinions on the risks and effectiveness of the H1N1 vaccine (opinion_h1n1_risk, opinion_h1n1_vacc_effective, and opinion_h1n1_sick_from_vacc) also show significant correlations.
@@ -87,6 +97,8 @@ The age group of the respondent (age_group) has a strong positive correlation wi
 ## MODELLING
 ## FIRST MODEL: LOGISTIC REGRESSION
 The model performs relatively well for both vaccines, but there's room for improvement, especially in recall for h1n1_vaccine. The lower recall indicates that the model might be missing a significant portion of individuals who actually received the H1N1 vaccine. The results for seasonal_vaccine are more balanced, with both precision and recall being in the mid-70s. These metrics provide a comprehensive view of the model's performance.
+
+![](/images/class%20imbalance.png)
 
 ## SECOND MODEL: LOGISTIC REGRESSION AFTER HANDLING CLASS IMBALANCE h1n1_vaccine
 ![](/images/logreg%20confusion.png)
