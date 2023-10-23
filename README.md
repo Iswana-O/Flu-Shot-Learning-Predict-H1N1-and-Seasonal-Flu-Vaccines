@@ -125,6 +125,6 @@ Health Insurance: A significant number of respondents do not have health insuran
 Race: There's a notable disparity in vaccination rates among racial groups. Targeted interventions and campaigns should be developed to address the specific concerns and barriers faced by the racial groups with lower vaccination rates.
 Sex: While the difference is slight, efforts can be made to ensure that both males and females have equal access to information and vaccination opportunities.
 
-### Model Recommendations for Predictive Analytics:**
+### Model Recommendations for Predictive Analytics:
 H1N1 Flu Predictions: Given that all three models (Random Forest, Gradient Boosting, and Logistic Regression) have competitive performance, it might be useful to consider an ensemble approach, leveraging the strengths of each model.
 Seasonal Flu Predictions: Given the significantly lower recall of Gradient Boosting, it might not be the best choice for predicting seasonal_vaccine, especially if identifying actual positive cases is crucial. Logistic Regression seems to be a balanced choice for this task.
