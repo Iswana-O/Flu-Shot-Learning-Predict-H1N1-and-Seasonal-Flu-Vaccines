@@ -83,3 +83,48 @@ Doctor recommendations (doctor_recc_h1n1) have the highest positive correlation 
 Seasonal Vaccine Correlations:
 
 The age group of the respondent (age_group) has a strong positive correlation with receiving the seasonal vaccine. Doctor recommendations for the seasonal flu vaccine (doctor_recc_seasonal) and opinions about its risk and effectiveness are also significantly correlated. Interestingly, the correlation of h1n1_vaccine with the seasonal vaccine is also evident, reinforcing our earlier observation that the two are not independent.
+## RESULTS AND CONCLUSIONS
+### Predict probabilities and plot their distribution
+H1N1 Flu:
+
+Precision: Random Forest and Gradient Boosting have similar precision, both higher than Logistic Regression.
+
+Recall: Logistic Regression has the highest recall, meaning it correctly identifies a larger percentage of actual positives than the other two models.
+
+F1-score: Given the balance of precision and recall, the F1-scores are quite close for all three models.
+
+Accuracy: Both Gradient Boosting and Random Forest have the same accuracy, which is higher than that of Logistic Regression. Seasonal Flu:
+
+Precision: Gradient Boosting has the highest precision, followed closely by Logistic Regression and then Random Forest.
+
+Recall: Logistic Regression has the highest recall, followed closely by Random Forest, while Gradient Boosting lags significantly.
+
+F1-score: Logistic Regression and Random Forest have much higher F1-scores than Gradient Boosting for seasonal_vaccine, given their balanced precision and recall.
+
+Accuracy: Logistic Regression has the highest accuracy, followed closely by Random Forest, with Gradient Boosting having notably lower accuracy.
+
+Overall: For predicting h1n1_vaccine, all three models offer competitive performance, with slight variations in precision, recall, and F1-score.
+
+For predicting seasonal_vaccine, while Gradient Boosting offers the highest precision, its recall is significantly lower than that of Logistic Regression and Random Forest, leading to a much lower F1-score and overall accuracy.
+
+## RECOMMENDATIONS
+### Public Awareness and Education:
+H1N1 Concern & Knowledge: Since a significant number of respondents have moderate to high concern and knowledge about H1N1, it suggests that public awareness campaigns have been somewhat effective. However, there's still room for improvement. Campaigns should be tailored to:Address the concerns of those at moderate and high levels to ensure they have accurate information.
+Target the groups with low or no concern and knowledge to raise awareness and understanding.
+
+Education Level: Vaccination rates are higher among those with higher education. Efforts should be made to target awareness campaigns to those with lower educational levels, possibly using easily accessible and understandable formats.
+
+Income and Poverty: There's a need for targeted campaigns in areas with higher poverty rates, possibly combined with subsidies or free vaccination programs to encourage higher vaccination rates among this demographic.
+
+### Health Infrastructure and Support:**
+
+Health Insurance: A significant number of respondents do not have health insurance. Policymakers should consider expanding access to affordable health insurance, which could indirectly improve vaccination rates and general health outcomes.
+
+### Targeted Interventions:
+
+Race: There's a notable disparity in vaccination rates among racial groups. Targeted interventions and campaigns should be developed to address the specific concerns and barriers faced by the racial groups with lower vaccination rates.
+Sex: While the difference is slight, efforts can be made to ensure that both males and females have equal access to information and vaccination opportunities.
+
+### Model Recommendations for Predictive Analytics:**
+H1N1 Flu Predictions: Given that all three models (Random Forest, Gradient Boosting, and Logistic Regression) have competitive performance, it might be useful to consider an ensemble approach, leveraging the strengths of each model.
+Seasonal Flu Predictions: Given the significantly lower recall of Gradient Boosting, it might not be the best choice for predicting seasonal_vaccine, especially if identifying actual positive cases is crucial. Logistic Regression seems to be a balanced choice for this task.
